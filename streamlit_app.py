@@ -24,7 +24,7 @@ else:
     if uploaded_sample_input and uploaded_sample_output:
 
         # Process the uploaded file and question.
-        document = uploaded_file.read().decode()
+        document = uploaded_file.read()
         messages = [
             {
                 "role": "user",
