@@ -14,11 +14,11 @@ else:
 
     # Let the user upload a file via `st.file_uploader`.
     uploaded_sample_input = st.file_uploader(
-        "Upload Sample Input (.txt)", type=("txt")
+        "Upload Sample Input (.txt)", type=("txt"))
     )
 
     uploaded_sample_output = st.file_uploader(
-        "Upload Sample Output (.txt)", type=("txt")
+        "Upload Sample Output (.txt)", type=("txt"))
     )
 
     if uploaded_sample_input and uploaded_sample_output:
