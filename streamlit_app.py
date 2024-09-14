@@ -45,4 +45,4 @@ else:
         #)
 
         # Stream the response to the app using `st.write_stream`.
-        st.write_stream("sample output")
+        #st.write_stream("sample output")
