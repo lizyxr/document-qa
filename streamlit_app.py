@@ -28,7 +28,8 @@ else:
         uploaded_sample_output_data = uploaded_sample_output.read().decode()
 
         if st.button("Start", type="primary"):
-            st.write_stream("sample output")
+            #st.write_stream("sample output")
+            st.write("sample output")
         
         #messages = [
         #    {
