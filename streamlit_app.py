@@ -24,13 +24,18 @@ else:
     if uploaded_sample_input and uploaded_sample_output:
 
         # Process the uploaded file and question.
-        document = uploaded_file.read()
-        messages = [
-            {
-                "role": "user",
-                "content": f"Here's a document: {document} \n\n---\n\n {question}",
-            }
-        ]
+        uploaded_sample_input_data = uploaded_sample_input.read().decode()
+        uploaded_sample_output_data = uploaded_sample_output.read().decode()
+
+        if st.button("Start", type="primary"):
+            st.write_stream("sample output")
+        
+        #messages = [
+        #    {
+        #        "role": "user",
+        #        "content": f"Here's a document: {document} \n\n---\n\n {question}",
+        #    }
+        #]
 
         # Generate an answer using the OpenAI API.
         #stream = client.chat.completions.create(
