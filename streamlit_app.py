@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+from rag import Rag
 
 # Show title and description.
 st.title("📄 Hackcup Demo")
@@ -8,10 +8,6 @@ problem = st.text_input("Problem")
 if not problem:
     st.info("Please add your problem to continue.", icon="❓")
 else:
-
-    # Create an OpenAI client.
-    #client = OpenAI(api_key=openai_api_key)
-
     # Let the user upload a file via `st.file_uploader`.
     uploaded_sample_input = st.file_uploader(
         "Upload Sample Input (.txt)", type=("txt")
@@ -31,20 +27,6 @@ else:
             #st.write_stream("sample output")
             rag = Rag(problem, uploaded_sample_input_data, uploaded_sample_output_data)
             st.write(rag.run())
-        
-        #messages = [
-        #    {
-        #        "role": "user",
-        #        "content": f"Here's a document: {document} \n\n---\n\n {question}",
-        #    }
-        #]
-
-        # Generate an answer using the OpenAI API.
-        #stream = client.chat.completions.create(
-        #    model="gpt-3.5-turbo",
-        #    messages=messages,
-        #    stream=True,
-        #)
 
         # Stream the response to the app using `st.write_stream`.
         #st.write_stream("sample output")
