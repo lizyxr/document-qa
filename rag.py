@@ -8,7 +8,7 @@ class Rag:
     self.input_data = input_data
     self.output_data = output_data
 
-  def run():
+  def run(self):
     return "sample output"
 
   
