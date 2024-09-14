@@ -1,5 +1,3 @@
-from openai import OpenAI
-
 class Rag:
   problem = ""
   input_data = ""
