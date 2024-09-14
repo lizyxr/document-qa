@@ -29,7 +29,8 @@ else:
 
         if st.button("Start", type="primary"):
             #st.write_stream("sample output")
-            st.write("sample output")
+            rag = Rag(problem, uploaded_sample_input_data, uploaded_sample_output_data)
+            st.write(rag.run())
         
         #messages = [
         #    {
